@@ -11,7 +11,7 @@ class NavigationCart extends Component
 
     public function getCountProperty()
     {
-        return CartFactory::make()->items()->count();
+        return CartFactory::make()->items()->sum('quantity');
     }
 
     public function render()
