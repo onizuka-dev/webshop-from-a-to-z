@@ -7,6 +7,11 @@ use Livewire\Component;
 
 class Cart extends Component
 {
+    public function getCartProperty()
+    {
+        return CartFactory::make();
+    }
+
     public function getItemsProperty()
     {
         return CartFactory::make()->items;
